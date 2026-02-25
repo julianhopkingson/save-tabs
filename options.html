@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Save Tabs Options</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Save Tabs Settings</h1>
+      <p class="subtitle">Customize your extension experience.</p>
+    </header>
+    
+    <main>
+      <section class="card">
+        <label for="display-count">
+          <span>Number of tab sessions displayed in the toolbar popup</span>
+          <span class="note">The default value is 25, maximum items are limited by "sessions" API.</span>
+        </label>
+        <div class="input-group">
+          <input type="number" id="display-count" min="1" max="25" value="25" />
+        </div>
+      </section>
+
+      <div class="action-footer">
+        <span id="save-status" class="status-msg"></span>
+        <button id="save-btn" class="btn-primary">SAVE</button>
+      </div>
+    </main>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

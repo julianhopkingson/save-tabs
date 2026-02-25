@@ -1,0 +1,141 @@
+■■■■■■■■■■■■■■■■■■■■
+基于最新更改，生成三个 Git 约定式提交 (Conventional Commits) 版本的单行英文消息：简洁版 (Concise)、专业版 (Professional)、易懂版 (User-friendly)。
+
+init: version 1.0 - initial release of Save Tabs - A Chrome extension to quickly restore recently closed tabs and manage browser sessions
+milestone: release v1.1 with reset settings, draggable group sites, and PNG icon fix
+milestone: version 1.2 - add single-key shortcut execution for expanded sub-menus
+milestone: version 1.3 - add customizable root menu shortcut support
+
+从上一次commit到现在为止的更改
+1 更新readme，只修改和增加必要的地方，尽量不删除
+2 生成三个 Git 约定式提交 (Conventional Commits) 版本的单行英文消息：简洁版 (Concise)、专业版 (Professional)、易懂版 (User-friendly)。
+以milestone: version 1.3 开头
+
+
+■■■■■■■■■■■■■■■■■■■■
+把这次的修改，合并进最新的那个commit里面，并push到GitHub
+
+记住，没有我的明确指示，绝不能擅自执行任何 commit、push 等版本控制相关动作。
+
+■■■■■■■■■■■■■■■■■■■■
+
+■■■■■■■■■■■■■■■■■■■■
+
+■■■■■■■■■■■■■■■■■■■■
+
+■■■■■■■■■■■■■■■■■■■■
+
+■■■■■■■■■■■■■■■■■■■■
+把这次的修改，合并进最新的那个commit里面，并push到GitHub
+
+记住，没有我的明确指示，绝不能擅自执行任何 commit、push 等版本控制相关动作。
+
+■■■■■■■■■■■■■■■■■■■■
+图1的按钮位置，希望能调整成图2这样的
+
+
+■■■■■■■■■■■■■■■■■■■■
+1 history按钮的icon没显示出来
+2 setting按钮应该放在最右边
+
+■■■■■■■■■■■■■■■■■■■■
+执行，记住 walkthrough文档放在 @doc 目录下，并命名为合适的文件名
+
+■■■■■■■■■■■■■■■■■■■■
+再增加一个修改，也就是在三个按键位置增加一个setting按键，点击后打开setting
+请修改md文件，记住只修改和增加必要的地方，尽量不删除
+
+■■■■■■■■■■■■■■■■■■■■
+我发现一个问题，就是有时候被关闭的tabs列表区域显示不出各个网站的logo，如图1的红框位置。
+
+请作为 首席架构师 (Lead Architect)，我需要你给出全面详细的设计解决方案，并列举出所有可能风险。
+内容为md格式，保存在 @doc 目录下
+请务必在给出最终设计方案后停止，禁止 (Prohibit) 修改任何文件，直到我输入 '执行'。
+Design_favicon_fix.md
+
+■■■■■■■■■■■■■■■■■■■■
+把这次的修改，合并进最新的那个commit里面，并push到GitHub
+
+
+■■■■■■■■■■■■■■■■■■■■
+我希望这三个按钮
+1 鼠标没放上去时，背景是淡绿色圆形
+2 鼠标放上去时，背景是橘色圆形
+
+■■■■■■■■■■■■■■■■■■■■
+1 空白太多，
+2 reload按钮太丑了
+■■■■■■■■■■■■■■■■■■■■
+现在的界面红框部分有点丑，希望你能美化一下
+
+
+
+■■■■■■■■■■■■■■■■■■■■
+init: version 1.0 - initial release of Save Tabs - A Chrome extension to quickly restore recently closed tabs and manage browser sessions
+
+
+■■■■■■■■■■■■■■■■■■■■
+生成三个 Git 约定式提交 (Conventional Commits) 版本的单行英文消息：简洁版 (Concise)、专业版 (Professional)、易懂版 (User-friendly)。
+开头是init: version 1.0
+记住没有我的明确指示，不能擅自做任何commit
+
+■■■■■■■■■■■■■■■■■■■■
+给我生成readme文件和gitignore文件
+
+
+■■■■■■■■■■■■■■■■■■■■
+这是GitHub链接，请连上，但不commit
+https://github.com/julianhopkingson/save-tabs.git
+记住没有我的明确指示，不能擅自做任何commit
+
+
+
+
+■■■■■■■■■■■■■■■■■■■■
+我打算上传到github，给我一个合适的description
+
+Chrome extension to quickly restore recently closed tabs and manage browser sessions
+
+■■■■■■■■■■■■■■■■■■■■
+把刚刚修改的这些经验追加到 @walkthrough_save-tabs.md
+
+■■■■■■■■■■■■■■■■■■■■
+不知道为何，我的icon显示就是小一些
+你看图1左边是我希望的效果，右边是现在的效果
+为何？
+
+■■■■■■■■■■■■■■■■■■■■
+svg的图片是对的，见图1
+但png格式的图片样子是错的，见图2
+
+■■■■■■■■■■■■■■■■■■■■
+还剩下icon没有设置，
+1 希望把图1转换成svg和png格式的图标，而且是没有背景的
+2 生成的文件列表见图2
+3 文件放入 @icons 目录
+
+
+
+■■■■■■■■■■■■■■■■■■■■
+1 图1的setting画面应该是全屏的，而不是弹窗样式的
+2 图2的被关闭的tab点击后没反应，为何？请修复
+
+■■■■■■■■■■■■■■■■■■■■
+我需要做一个chrome的plugin
+它有两个主要的功能
+功能1
+1 如图1的红框位置那样，可以点击打开被关闭的tabs
+2 在setting里面可以设置 Number of tab sessions displayed in the toolbar popup，但不需要font size的设置，见图2，但图2的界面太丑了，希望设计得好看些
+
+功能2
+在图3的那种功能区
+1 有"Open history tab"，点击后打开chrome://history/
+2 但不需要 Open all the above items in tabs
+3 增加一个功能，就是"Save current tabs" 和 "Recover saved tabs"，
+点击"Save current tabs"后，会把当前打开的所有tabs以及分组还有固定等设置都保存下来，若是已经有了就覆盖保存
+点击"Recover saved tabs"后，先提示说会删掉当前所有tabs，然后复原保存的tabs，用户确认后，会把保存的tabs等复原。
+
+请作为 首席架构师 (Lead Architect)，我需要你给出全面详细的设计解决方案，并列举出所有可能风险。
+内容为md格式，保存在./doc目录下
+请务必在给出最终设计方案后停止，禁止 (Prohibit) 修改任何文件，直到我输入 '执行'。
+

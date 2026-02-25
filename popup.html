@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Save Tabs</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+    <!-- 上部：被关闭的标签页列表区 -->
+    <main class="session-list" id="session-list">
+        <!-- 内容由 JS 动态渲染 -->
+        <div class="loading-state" id="loading-state">Loading...</div>
+        <div class="empty-state hidden" id="empty-state">No recently closed sessions.</div>
+    </main>
+
+    <!-- 下部：悬浮 Dock 栏 -->
+    <footer class="action-dock">
+        <button id="btn-history" title="Open History Tab" class="dock-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+        </button>
+        <button id="btn-save" title="Save Current Tabs" class="dock-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                <polyline points="7 3 7 8 15 8"></polyline>
+            </svg>
+        </button>
+        <button id="btn-recover" title="Recover Saved Tabs" class="dock-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="9 14 4 9 9 4"></polyline>
+                <path d="M20 20v-7a4 4 0 0 0-4-4H4"></path>
+            </svg>
+        </button>
+        <button id="btn-settings" title="Settings" class="dock-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                </path>
+            </svg>
+        </button>
+    </footer>
+
+    <!-- 全局遮罩与二次确认弹窗 -->
+    <div id="confirm-modal" class="modal-overlay hidden">
+        <div class="modal">
+            <div class="modal-icon">⚠️</div>
+            <h3 class="modal-title">Recover Saved Tabs?</h3>
+            <p class="modal-desc">This action will close <b>all current tabs</b> and replace them with the saved
+                session. This cannot be undone.</p>
+            <div class="modal-actions">
+                <button id="btn-modal-cancel" class="btn-cancel">Cancel</button>
+                <button id="btn-modal-confirm" class="btn-danger">Confirm Recover</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
